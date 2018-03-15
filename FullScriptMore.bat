@@ -28,7 +28,7 @@ sc stop "RemoteRegistry"
 sc config "RemoteRegistry" start= disabled
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f
 
-REM Flush DNS Cache
+REM Clear DNS Cache
 ipconifg /flushdns
 
 pause
